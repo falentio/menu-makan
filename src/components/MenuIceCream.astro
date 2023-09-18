@@ -1,0 +1,32 @@
+---
+import Recommendation from "./Recommendation.astro";
+const menus = [
+  { name: "Ice Cream Melon", price: 15 },
+  { name: "Ice Cream Anggur", price: 15 },
+  { name: "Ice Cream Blueberry", price: 15 },
+  { name: "Ice Cream Strawberry", price: 15 },
+  { name: "Ice Cream Pisang", price: 15 },
+  { name: "Ice Cream Durian", price: 15 },
+  { name: "Ice Cream Nanas", price: 15 },
+  { name: "Ice Cream Melon", price: 15 },
+  { name: "Ice Cream Apel", price: 15 },
+] as const;
+---
+
+<div class="flex flex-row gap-8 <sm:flex-col-reverse p-8 max-w-2xl w-full justify-between mx-auto">
+  <div class="flex flex-col gap-2 mx-auto w-full">
+    {
+      menus.map(({ name, price }) => (
+        <div class="flex flex-row gap-8 justify-between">
+          <span>{name}</span>
+          <span class="bg-red-6 text-amber rounded-md px-2 py-1 text-sm">{price}rb</span>
+        </div>
+      ))
+    }
+    <Recommendation />
+  </div>
+  <div class="sm:(w-1/3 flex-col) flex gap-2 overflow-hidden <sm:(flex-row [&>*]:(w-1/2))">
+    <img class="object-cover rounded aspect-square" src="//picsum.photos/seed/ice/300" />
+    <img class="object-cover rounded aspect-square" src="//picsum.photos/seed/ice/300" />
+  </div>
+</div>

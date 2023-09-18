@@ -1,0 +1,20 @@
+---
+import Logo from "./Logo.astro";
+
+interface Props {
+  title: string;
+  alt?: string;
+  description?: string;
+}
+
+const { title, alt, description } = Astro.props;
+---
+
+<section class="bg-zinc-9 text-white flex flex-row p-4 items-center justify-between flex flex-row gap-4">
+  <div class="flex flex-col">
+    <h2 class="text-2xl sm:text-4xl text-amber font-alfa">{title}</h2>
+    {!!alt && <span class="text-red-6 font-alfa">{alt}</span>}
+    {!!description && <p class="text-xs font-alfa font-300">{description}</p>}
+  </div>
+  <Logo />
+</section>

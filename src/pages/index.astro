@@ -1,0 +1,36 @@
+---
+import Banner from "../components/Banner.astro";
+import MenuBakso from "../components/MenuBakso.astro";
+import MenuIceCream from "../components/MenuIceCream.astro";
+import MenuIceCreamJumbo from "../components/MenuIceCreamJumbo.astro";
+import MenuNasiGoreng from "../components/MenuNasiGoreng.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Menu Makanan Hari Ini">
+  <main class="flex flex-col bg-amber-4 min-h-screen font-alfa">
+    <section class="text-center h-screen justify-center flex flex-col gap-2 font-sans">
+      <span class="i-mdi-food-outline w-36 h-36 mx-auto"></span>
+      <h1 class="font-bold text-5xl">Menu Makan</h1>
+      <span>Lezat sekali</span>
+    </section>
+    <Banner title="Menu Nasi Goreng Hemat" />
+    <MenuNasiGoreng />
+    <Banner title="Menu Bakso Sepuasnya" alt="OSKAB" description="Aneka pilihan bakso yang dapat and pilih" />
+    <MenuBakso />
+    <Banner
+      title="Menu Ice Cream"
+      alt="MixMe"
+      description="Ice cream dengan rasa yang sangat unik sebagai dessert mu"
+    />
+    <MenuIceCream />
+    <Banner
+      title="Ice Cream Jumbo"
+      alt="Guedi"
+      description="apa eskrimnya dimana belinya, aku bohong, anjay eskrim yang bohong"
+    />
+    <MenuIceCreamJumbo />
+    <Banner title="Ice Cream" />
+    <div class="min-h-screen"></div>
+  </main>
+</Layout>
